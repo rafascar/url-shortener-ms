@@ -13,10 +13,13 @@ app.use(express.static('public'));
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function (request, response) {
-  response.sendFile(__dirname + '/views/index.html');
+  response.sendFile(__dirname + '/views/index.html');  
 });
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
+
+const mongo = require("mongodb").MongoClient;
+const dburl = "mongodb://"+process.env.USER+":"+process.env.PASSWORD+"@ds153609.mlab.com:53609/rafascardb";

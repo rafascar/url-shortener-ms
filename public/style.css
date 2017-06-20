@@ -3,3 +3,7 @@
 
 /* You might want to try something fancier: */
 /* less: http://lesscss.org/ */
+
+body {
+  margin-top: 60px;
+}
